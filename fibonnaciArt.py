@@ -7,14 +7,12 @@
 
 # Done in Python. Using turtle.
 
-
-# Function to fill an array with the numbers of the fibnoccai sequences
-# to be used in an arithemtic drawing
-
 from turtle import *
 import random
 from time import perf_counter as sleep
 
+# Function to fill an array with the numbers of the fibnoccai sequences
+# to be used in an arithemtic drawing
 def fibFill(arraySize):
     arrayName = [1,1]
     while len(arrayName)<arraySize:
@@ -22,8 +20,8 @@ def fibFill(arraySize):
     return arrayName
 
 
-# Function to draw the circles.
-# Upper Range indicates how large the circles whould get.
+# Function to draw the half-circles.
+# Upper Range indicates how large the circles will get.
 # With an option to connect them at a defined angle
 def interlockingCircles(upperRange, xCoord, yCoord, angle=None, modifier=10 ):
     angleDirection = angle
@@ -93,7 +91,6 @@ for x in range(5):
     color(random.choice(colors))
     interlockingCircles(50,0,0,angle,size)
     
-
 mainloop()
 
     
